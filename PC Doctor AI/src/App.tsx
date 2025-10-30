@@ -1,7 +1,11 @@
-import { BrowserRouter } from 'react-router-dom'
-import { AppRoutes } from './router'
+import Home from './pages/Home'
+import Navbar from './components/Navbar'
+
 export default function App() {
   return (
-    <h1>Hola desde PC Doctor AI</h1>
+    <>
+      <Navbar />
+      <Home />
+    </>
   );
 }
