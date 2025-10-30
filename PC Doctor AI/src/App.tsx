@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from "./pages/home/page";
-import home from './pages/home/page';
+import ContactSection from "./pages/components/ContactSection";
 
 export default function App() {
   return (
