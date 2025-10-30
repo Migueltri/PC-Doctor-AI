@@ -13,10 +13,12 @@ import PCDoctorAI from '../../components/ai/PCDoctorAI';
 import AppointmentScheduler from '../../components/ai/AppointmentScheduler';
 
 export default function Home() {
-  const [isAIOpen, setIsAIOpen] = useState(false);
-  const [isSchedulerOpen, setIsSchedulerOpen] = useState(false);
-  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
-
+  return (
+    <div>
+      <h1>Bienvenido a PC Doctor AI</h1>
+    </div>
+  );
+}
   // Load Calendly script
   useEffect(() => {
     const script = document.createElement('script');
