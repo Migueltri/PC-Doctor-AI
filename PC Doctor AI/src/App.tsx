@@ -1,10 +1,9 @@
-import Home from "./pages/home/page";
-import ContactSection from "./pages/components/ContactSection";
-import AboutSection from "./pages/components/AboutSection";
-import HeroSection from "./pages/components/HeroSection";
-import ServicesSection from "./pages/components/ServicesSection";
-import NewsletterSection from "./pages/components/NewsletterSection";
-import ProductsSection from "./pages/components/ProductsSection";
+import HeroSection from "./pages/home/components/HeroSection";
+import AboutSection from "./pages/home/components/AboutSection";
+import ServicesSection from "./pages/home/components/ServicesSection";
+import ProductsSection from "./pages/home/components/ProductsSection";
+import NewsletterSection from "./pages/home/components/NewsletterSection";
+import ContactSection from "./pages/home/components/ContactSection";
 
 export default function App() {
   return (
@@ -15,7 +14,6 @@ export default function App() {
       <ProductsSection />
       <NewsletterSection />
       <ContactSection />
-      <Home />
     </>
   );
 }
