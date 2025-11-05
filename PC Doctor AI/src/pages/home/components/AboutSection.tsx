@@ -76,7 +76,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="w-full md:w-1/2 flex justify-center">
   <img
-    src="/images/expertos.png"  
+    src="/images/expertos.jpg"  
     alt="Técnico PC Doctor AI trabajando en laboratorio"
     className="rounded-lg shadow-xl w-3/4 md:w-2/3 lg:w-1/2 object-contain"
   />
