@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,20 +6,22 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     font-family: 'Inter', sans-serif;
-/* Oculta el botón flotante / avatar / imágenes inyectadas por el widget IA */
-#vapi-widget-floating-button,
-#vapi-widget-floating-button img,
-.vapi-assistant,
-.vapi-assistant img,
-iframe[src*="readdy.ai"],
-div[class*="vapi"] img {
-  display: none !important;
-  visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
+  }
+
+  /* Oculta el botón flotante / avatar / imágenes inyectadas por el widget IA */
+  #vapi-widget-floating-button,
+  #vapi-widget-floating-button img,
+  .vapi-assistant,
+  .vapi-assistant img,
+  iframe[src*="readdy.ai"],
+  div[class*="vapi"] img {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 }
 
