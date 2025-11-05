@@ -89,13 +89,6 @@ export default function HeroSection() {
 
           {/* Hero Image */}
           <div className="relative">
-            <div className="relative z-10">
-              <img
-                src="https://readdy.ai/api/search-image?query=Professional%20computer%20technician%20working%20on%20modern%20desktop%20computer%20repair%20in%20clean%20high-tech%20workshop%20environment%2C%20advanced%20diagnostic%20equipment%2C%20blue%20LED%20lighting%2C%20professional%20tools%2C%20circuit%20boards%2C%20modern%20technology%20repair%20station%2C%20expert%20hands%20working%20with%20precision%2C%20high-quality%20professional%20photography%2C%20clean%20minimalist%20background%20with%20subtle%20technology%20elements&width=600&height=700&seq=hero-tech-pro&orientation=portrait"
-                alt="PC Doctor AI - Servicio Técnico Profesional"
-                className="w-full h-auto rounded-2xl shadow-2xl object-cover"
-              />
-            </div>
             
             {/* Floating Elements */}
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-blue-500/20 backdrop-blur-sm rounded-2xl flex items-center justify-center animate-float border border-blue-400/30">
