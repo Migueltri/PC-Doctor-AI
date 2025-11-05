@@ -1,4 +1,3 @@
-
 export default function AboutSection() {
   const stats = [
     { number: '500+', label: 'Equipos Reparados', icon: 'ri-tools-line' },
@@ -75,13 +74,13 @@ export default function AboutSection() {
 
           {/* Image and Stats */}
           <div className="relative">
-            <div className="relative z-10">
-              <img
-                src="https://readdy.ai/api/search-image?query=Professional%20computer%20technician%20expert%20working%20in%20modern%20technology%20repair%20workshop%2C%20advanced%20diagnostic%20equipment%2C%20professional%20tools%2C%20clean%20organized%20workspace%2C%20expert%20hands%20repairing%20motherboard%2C%20high-tech%20environment%2C%20professional%20lighting%2C%20detailed%20close-up%20of%20technical%20work%2C%20blue%20color%20scheme&width=600&height=700&seq=about-tech1&orientation=portrait"
-                alt="PC Doctor AI - Equipo profesional"
-                className="w-full h-auto rounded-2xl shadow-2xl object-cover"
-              />
-            </div>
+            <div className="w-full md:w-1/2 flex justify-center">
+  <img
+    src="/images/expertos.png"  
+    alt="Técnico PC Doctor AI trabajando en laboratorio"
+    className="rounded-lg shadow-xl w-3/4 md:w-2/3 lg:w-1/2 object-contain"
+  />
+</div>
             
             {/* Stats Overlay */}
             <div className="absolute -bottom-8 -left-8 bg-white rounded-2xl p-6 shadow-2xl border border-gray-100">
