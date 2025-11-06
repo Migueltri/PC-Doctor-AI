@@ -1,6 +1,7 @@
-
-import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from "react";
+import PCDoctorAI from "./components/ai/PCDoctorAI";
+import AppointmentScheduler from "./components/ai/AppointmentScheduler";
 
 interface Message {
   id: string;
@@ -33,6 +34,8 @@ export default function PCDoctorAI({ isOpen, onClose }: PCDoctorAIProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const recognitionRef = useRef<any>(null);
+  const [isAIOpen, setIsAIOpen] = useState(true); // Abre el chat al cargar
+  const [isSchedulerOpen, setIsSchedulerOpen] = useState(false);
 
   const technicalResponses = {
     'virus': '🦠 **ELIMINACIÓN DE VIRUS DETECTADA**\n\n✅ **Plan de acción inmediato:**\n1. Desconecta internet temporalmente\n2. Ejecuta Windows Defender en modo offline\n3. Descarga Malwarebytes desde otro dispositivo\n4. Escanea en modo seguro\n5. Verifica programas de inicio sospechosos\n\n¿Qué síntomas específicos has notado? (lentitud, ventanas emergentes, archivos cifrados...)',
@@ -197,6 +200,35 @@ export default function PCDoctorAI({ isOpen, onClose }: PCDoctorAIProps) {
   };
 
   return (
+    {/* Asistente PC Doctor AI */}
+<PCDoctorAI isOpen={isAIOpen} onClose={() => setIsAIOpen(false)} />
+
+{/* Planificador de citas */}
+<AppointmentScheduler
+  isOpen={isSchedulerOpen}
+  onClose={() => setIsSchedulerOpen(false)}
+/>
+
+{/* Botón flotante para reabrir IA cuando está cerrada */}
+{!isAIOpen && (
+  <button
+    onClick={() => setIsAIOpen(true)}
+    style={{
+      position: "fixed",
+      bottom: "1.5rem",
+      right: "1.5rem",
+      background: "#2563eb",
+      color: "white",
+      borderRadius: "9999px",
+      padding: "1rem",
+      boxShadow: "0 10px 20px rgba(0,0,0,0.2)",
+      border: "none",
+      cursor: "pointer",
+    }}
+  >
+    💬
+  </button>
+)}
     <AnimatePresence>
       {isOpen && (
         <motion.div
