@@ -12,11 +12,18 @@ import ContactSection from './components/ContactSection';
 import PCDoctorAI from '../../components/ai/PCDoctorAI';
 import AppointmentScheduler from '../../components/ai/AppointmentScheduler';
 
-export default function Home() {
+export default function Page() {
   return (
-    <div>
-      <h1>Bienvenido a PC Doctor AI</h1>
-    </div>
+    <main>
+      {/* Tu contenido actual */}
+      <HeroSection />
+      <Services />
+
+      {/* Aquí añadimos la IA */}
+      <section id="ai">
+        <PCDoctorAI />
+      </section>
+    </main>
   );
 }
   // Load Calendly script
