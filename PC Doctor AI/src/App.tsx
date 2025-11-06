@@ -1,3 +1,4 @@
+import { useState } from "react";
 import HeroSection from "./pages/home/components/HeroSection";
 import AboutSection from "./pages/home/components/AboutSection";
 import ServicesSection from "./pages/home/components/ServicesSection";
@@ -9,9 +10,11 @@ import PCDoctorAI from "./components/ai/PCDoctorAI";
 import AppointmentScheduler from "./components/ai/AppointmentScheduler";
 
 export default function App() {
+  const [isAIOpen, setIsAIOpen] = useState(true);    // 👈 debe estar en true mientras pruebas
+  const [isSchedulerOpen, setIsSchedulerOpen] = useState(false);
+
   return (
     <>
-      {/* Secciones actuales */}
       <HeroSection />
       <AboutSection />
       <ServicesSection />
@@ -19,9 +22,12 @@ export default function App() {
       <NewsletterSection />
       <ContactSection />
 
-      {/* 🔹Nueva sección IA*/}
-      <PCDoctorAI />
-      <AppointmentScheduler />
+      {/* 👇 importa el chat y pásale isOpen en true */}
+      <PCDoctorAI isOpen={isAIOpen} onClose={() => setIsAIOpen(false)} />
+      <AppointmentScheduler
+        isOpen={isSchedulerOpen}
+        onClose={() => setIsSchedulerOpen(false)}
+      />
     </>
   );
 }
