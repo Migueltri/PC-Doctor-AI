@@ -1,4 +1,3 @@
-import PCDoctorAI from "@/components/ai/PCDoctorAI";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../../components/feature/Header';
@@ -11,21 +10,22 @@ import NewsletterSection from './components/NewsletterSection';
 import ContactSection from './components/ContactSection';
 import PCDoctorAI from '../../components/ai/PCDoctorAI';
 import AppointmentScheduler from '../../components/ai/AppointmentScheduler';
+import PCDoctorAI from '../../components/ai/PCDoctorAI';  // usa "@/..." si tu proyecto lo soporta, si no pon "../components/ai/PCDoctorAI"
 
 export default function Page() {
   return (
     <main>
-      {/* Tu contenido actual */}
+      {/* Otros componentes que ya tienes */}
+      <Header />
       <HeroSection />
-      <Services />
+      <ServicesSection />
 
-      {/* Aquí añadimos la IA */}
-      <section id="ai">
-        <PCDoctorAI />
-      </section>
+      {/* Aquí insertas la sección IA */}
+      <PCDoctorAI />
     </main>
   );
 }
+
   // Load Calendly script
   useEffect(() => {
     const script = document.createElement('script');
