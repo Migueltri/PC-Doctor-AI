@@ -17,10 +17,6 @@ interface PCDoctorAIProps {
   onClose: () => void;
 }
 
-export default function App() {
-  const [isAIOpen, setIsAIOpen] = useState(true);
-  const [isSchedulerOpen, setIsSchedulerOpen] = useState(false);
-
 export default function PCDoctorAI({ isOpen, onClose }: PCDoctorAIProps) {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -29,6 +25,11 @@ export default function PCDoctorAI({ isOpen, onClose }: PCDoctorAIProps) {
       isUser: false,
       timestamp: new Date()
     }
+    export default function PCDoctorAI({ isOpen, onClose }: PCDoctorAIProps) {
+  const [isAIOpen, setIsAIOpen] = useState(true);
+  const [isSchedulerOpen, setIsSchedulerOpen] = useState(false);
+  // ...
+}
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
