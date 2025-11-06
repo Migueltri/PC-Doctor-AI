@@ -1,14 +1,12 @@
-import { useState } from "react";
-import PCDoctorAI from "./components/ai/PCDoctorAI";
-import AppointmentScheduler from "./components/ai/AppointmentScheduler";
-
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 
 interface Message {
   id: string;
   text: string;
   isUser: boolean;
   timestamp: Date;
-  type?: 'text' | 'image' | 'video';
+  type?: "text" | "image" | "video";
   mediaUrl?: string;
 }
 
@@ -18,20 +16,17 @@ interface PCDoctorAIProps {
 }
 
 export default function PCDoctorAI({ isOpen, onClose }: PCDoctorAIProps) {
+  // ✅ Todos los hooks deben estar *dentro* del componente
   const [messages, setMessages] = useState<Message[]>([
     {
-      id: '1',
-      text: '🤖 ¡Hola! Soy PC Doctor AI, tu técnico virtual especializado. Puedo ayudarte con diagnósticos, reparaciones y soporte técnico 24/7. ¿Qué problema tienes con tu ordenador?',
+      id: "1",
+      text: "🤖 ¡Hola! Soy PC Doctor AI, tu técnico virtual especializado. Puedo ayudarte con diagnósticos, reparaciones y soporte técnico 24/7. ¿Qué problema tienes con tu ordenador?",
       isUser: false,
-      timestamp: new Date()
-    }
-    export default function PCDoctorAI({ isOpen, onClose }: PCDoctorAIProps) {
-  const [isAIOpen, setIsAIOpen] = useState(true);
-  const [isSchedulerOpen, setIsSchedulerOpen] = useState(false);
-  // ...
-}
+      timestamp: new Date(),
+    },
   ]);
-  const [inputMessage, setInputMessage] = useState('');
+
+  const [inputMessage, setInputMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [isVideoCall, setIsVideoCall] = useState(false);
@@ -39,7 +34,8 @@ export default function PCDoctorAI({ isOpen, onClose }: PCDoctorAIProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const recognitionRef = useRef<any>(null);
-  const [isAIOpen, setIsAIOpen] = useState(true); // Abre el chat al cargar
+
+  const [isAIOpen, setIsAIOpen] = useState(true);
   const [isSchedulerOpen, setIsSchedulerOpen] = useState(false);
 
   const technicalResponses = {
