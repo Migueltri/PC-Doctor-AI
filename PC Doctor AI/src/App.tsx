@@ -124,6 +124,28 @@ export default function App() {
         isOpen={isSchedulerOpen}
         onClose={() => setIsSchedulerOpen(false)}
       />
+            {/* 🚀 Modales del chat y del planificador */}
+      <PCDoctorAI isOpen={isAIOpen} onClose={() => setIsAIOpen(false)} />
+      <AppointmentScheduler
+        isOpen={isSchedulerOpen}
+        onClose={() => setIsSchedulerOpen(false)}
+      />
+
+      {/* 🔹 BOTÓN FLOTANTE AZUL (como en Readdy) */}
+      {!isAIOpen && (
+        <div className="fixed bottom-6 right-6 flex items-center space-x-2 z-[9999]">
+          <button
+            onClick={() => setIsAIOpen(true)}
+            className="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-2xl transition-all duration-300 flex items-center"
+            title="Habla con PC Doctor AI"
+          >
+            <i className="ri-robot-2-line text-2xl"></i>
+          </button>
+          <span className="hidden sm:inline-block bg-blue-900/80 text-white text-sm px-4 py-2 rounded-full shadow-lg backdrop-blur-sm">
+            Habla con nosotros
+          </span>
+        </div>
+      )}
     </>
   );
 }
