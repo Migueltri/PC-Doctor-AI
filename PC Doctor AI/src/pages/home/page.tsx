@@ -10,8 +10,8 @@ import NewsletterSection from './components/NewsletterSection';
 import ContactSection from './components/ContactSection';
 import PCDoctorAI from '../../components/ai/PCDoctorAI';
 import AppointmentScheduler from '../../components/ai/AppointmentScheduler';
-import PCDoctorAI from '../../components/ai/PCDoctorAI.tsx';  // usa "@/..." si tu proyecto lo soporta, si no pon "../components/ai/PCDoctorAI"
-import PCDoctorAI from '../../components/ai/AppointmentScheduler.tsx';
+import PCDoctorAI from '../../components/ai/PCDoctorAI';  // usa "@/..." si tu proyecto lo soporta, si no pon "../components/ai/PCDoctorAI"
+import PCDoctorAI from '../../components/ai/AppointmentScheduler';
 
 export default function Page() {
   return (
