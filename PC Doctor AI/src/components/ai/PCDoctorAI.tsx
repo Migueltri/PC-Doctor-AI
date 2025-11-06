@@ -1,5 +1,7 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
+import PCDoctorAI from "./components/ai/PCDoctorAI";
+import AppointmentScheduler from "./components/ai/AppointmentScheduler";
+
 
 interface Message {
   id: string;
@@ -14,6 +16,10 @@ interface PCDoctorAIProps {
   isOpen: boolean;
   onClose: () => void;
 }
+
+export default function App() {
+  const [isAIOpen, setIsAIOpen] = useState(true);
+  const [isSchedulerOpen, setIsSchedulerOpen] = useState(false);
 
 export default function PCDoctorAI({ isOpen, onClose }: PCDoctorAIProps) {
   const [messages, setMessages] = useState<Message[]>([
