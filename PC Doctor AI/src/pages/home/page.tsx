@@ -1,4 +1,4 @@
-
+import PCDoctorAI from "@/components/ai/PCDoctorAI";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../../components/feature/Header';
