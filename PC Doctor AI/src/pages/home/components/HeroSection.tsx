@@ -89,7 +89,7 @@ export default function HeroSection() {
 {/* Hero Image */}
 <div className="relative flex items-center justify-center">
   <img
-    src="/expertos.jpg"
+    src="/images/expertos.jpg"
     alt="PC Doctor AI - Logo"
     className="w-72 max-w-full h-auto rounded-2xl shadow-2xl border border-white/10"
     loading="lazy"
