@@ -1,4 +1,3 @@
-
 import Button from '../../../components/base/Button';
 
 export default function HeroSection() {
@@ -87,8 +86,14 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative">
+{/* Hero Image */}
+<div className="relative flex items-center justify-center">
+  <img
+    src="/expertos.png"
+    alt="PC Doctor AI - Logo"
+    className="w-72 max-w-full h-auto rounded-2xl shadow-2xl border border-white/10"
+    loading="lazy"
+  />
             
             {/* Floating Elements */}
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-blue-500/20 backdrop-blur-sm rounded-2xl flex items-center justify-center animate-float border border-blue-400/30">
