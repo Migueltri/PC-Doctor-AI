@@ -87,27 +87,31 @@ export default function HeroSection() {
           </div>
 
 {/* Hero Image */}
-<div className="relative flex items-center justify-center">
+<div className="relative flex items-center justify-center lg:justify-end">
   <img
-    src="/images/expertos.jpg"
-    alt="PC Doctor AI - Logo"
-    className="w-72 max-w-full h-auto rounded-2xl shadow-2xl border border-white/10"
+    src={Expertos}
+    alt="PC Doctor AI - Imagen"
+    className="w-72 md:w-96 lg:w-[520px] xl:w-[640px] max-w-full h-auto rounded-2xl shadow-2xl border border-white/10 z-10"
     loading="lazy"
+    onLoad={() => console.log('Imagen Expertos cargada')}
+    onError={(e) => {
+      console.error('Error cargando imagen Expertos:', (e.currentTarget as HTMLImageElement).src);
+      (e.currentTarget as HTMLImageElement).style.display = 'none';
+    }}
+    style={{ objectFit: 'cover' }}
   />
-            
-            {/* Floating Elements */}
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-blue-500/20 backdrop-blur-sm rounded-2xl flex items-center justify-center animate-float border border-blue-400/30">
-              <i className="ri-cpu-line text-3xl text-blue-300"></i>
-            </div>
-            <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-emerald-500/20 backdrop-blur-sm rounded-2xl flex items-center justify-center animate-float border border-emerald-400/30" style={{ animationDelay: '1s' }}>
-              <i className="ri-shield-check-line text-2xl text-emerald-300"></i>
-            </div>
-            <div className="absolute top-1/2 -left-4 w-16 h-16 bg-purple-500/20 backdrop-blur-sm rounded-xl flex items-center justify-center animate-float border border-purple-400/30" style={{ animationDelay: '2s' }}>
-              <i className="ri-tools-line text-xl text-purple-300"></i>
-            </div>
-          </div>
-        </div>
-      </div>
+
+  {/* Floating Elements (mantén tus iconos flotantes) */}
+  <div className="absolute -top-6 -right-6 w-24 h-24 bg-blue-500/20 backdrop-blur-sm rounded-2xl flex items-center justify-center animate-float border border-blue-400/30">
+    <i className="ri-cpu-line text-3xl text-blue-300"></i>
+  </div>
+  <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-emerald-500/20 backdrop-blur-sm rounded-2xl flex items-center justify-center animate-float border border-emerald-400/30" style={{ animationDelay: '1s' }}>
+    <i className="ri-shield-check-line text-2xl text-emerald-300"></i>
+  </div>
+  <div className="absolute top-1/2 -left-4 w-16 h-16 bg-purple-500/20 backdrop-blur-sm rounded-xl flex items-center justify-center animate-float border border-purple-400/30" style={{ animationDelay: '2s' }}>
+    <i className="ri-tools-line text-xl text-purple-300"></i>
+  </div>
+</div>
       
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
