@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../../../components/base/Button';
-import Expertos from '../../../assets/expertos.jpg'; // <-- asegúrate de que exista
+import Expertos from '../../../images/expertos.jpg';
+
 
 export default function HeroSection() {
   return (
