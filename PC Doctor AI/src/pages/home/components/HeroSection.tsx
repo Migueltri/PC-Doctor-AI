@@ -95,16 +95,11 @@ export default function HeroSection() {
           {/* Hero Image */}
           <div className="relative flex items-center justify-center lg:justify-end">
             <img
-              src={Expertos}
-              alt="PC Doctor AI - Imagen"
-              className="w-72 md:w-96 lg:w-[520px] xl:w-[640px] max-w-full h-auto rounded-2xl shadow-2xl border border-white/10 z-10 object-cover"
-              loading="lazy"
-              onLoad={() => console.log('Imagen Expertos cargada')}
-              onError={(e) => {
-                console.error('Error cargando imagen Expertos:', (e.currentTarget as HTMLImageElement).src);
-                (e.currentTarget as HTMLImageElement).style.display = 'none';
-              }}
-            />
+  src={Expertos}
+  alt="PC Doctor AI - Imagen"
+  className="w-72 md:w-96 lg:w-[520px] xl:w-[640px] max-w-full h-auto rounded-2xl shadow-2xl border border-white/10 z-10 object-cover"
+  loading="lazy"
+/>
 
             {/* Floating Elements */}
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-blue-500/20 backdrop-blur-sm rounded-2xl flex items-center justify-center animate-float border border-blue-400/30">
