@@ -133,5 +133,14 @@ export default function HeroSection() {
         }
       `}</style>
     </section>
+    {/* Author Credit */}
+<div className="absolute top-6 right-6 z-20 hidden md:flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-full">
+  <span className="text-xs text-blue-200">
+    Creado por
+  </span>
+  <span className="text-xs font-semibold text-blue-100">
+    Miguel Trijueque Urrea
+  </span>
+</div>
   );
 }
